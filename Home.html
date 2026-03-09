@@ -16,7 +16,7 @@
 <body class="bg-[#F8FAFC]">
     <header class="bg-white shadow-sm">
         <div class="header-container max-w-[1300px] mx-auto">
-            <div class="navbar">
+            <div class="navbar flex flex-col md:flex-row gap-2">
                 <div class="flex-1">
                     <div class="logo-flex flex justify-start items-center gap-2">
                         <img class="size-10" src="./assets/images/logo.png" alt="logo">
@@ -35,18 +35,18 @@
             <section class="toggle-parent bg-white shadow-sm">
                 <div class="ps-6 py-6">
                 <button onclick="toggleStyle('allBtn')" class="bg-primary text-white px-8 py-2 rounded-md border border-[#64748B]" id="allBtn">All</button>
-                <button onclick="toggleStyle('interviewBtn')" class="bg-white px-4 py-2 rounded-md text-[#64748B] border border-[#64748B]"  id="interviewBtn">Interview</button>
-                <button onclick="toggleStyle('rejectedBtn')" class="bg-white px-4 py-2 rounded-md text-[#64748B] border border-[#64748B]" id="rejectedBtn">Rejected</button>
+                <button onclick="toggleStyle('openBtn')" class="bg-white px-4 py-2 rounded-md text-[#64748B] border border-[#64748B]"  id="openBtn">Open</button>
+                <button onclick="toggleStyle('closedBtn')" class="bg-white px-4 py-2 rounded-md text-[#64748B] border border-[#64748B]" id="closedBtn">Closed</button>
             </div>
             </section>
             <section class="issue-parent mt-4 bg-white shadow-sm border-b-2 border-[#f2f2f2] border-solid">
-                <div class="p-6 flex justify-between items-center">
-                    <div class="issues-div flex items-center gap-2">
+                <div class="p-6 flex flex-col gap-4 items-center justify-between md:flex-row ">
+                    <div class="issues-div flex items-center gap-4 md: justify-between ">
                         <div class="issue-icon bg-base-200 p-2 rounded-full">
                             <h4 class="text-3xl text-primary"><i class="fa-solid fa-dharmachakra"></i></h4>
                         </div>
                         <div class="issue-texts flex flex-col gap-0">
-                            <h3 class="text-[#1F2937] font-bold"><span id="issues">50</span> Issues</h3>
+                            <h3 class="text-[#1F2937] font-bold"><span id="issues">0</span> Issues</h3>
                             <p class="text-[#64748B]">Track and manage your project issues</p>
                         </div>
                     </div>
@@ -59,10 +59,13 @@
                 </div>
             </section>
             <section class="main bg-[#FBFBFB] shadow-sm">
-                <div id="main-parent" class="p-6 grid grid-cols-4 gap-6 items-start">
-
+                <div id="main-parent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5">
+                    <div id="filtered-parent" class="hidden"></div>
 
                 </div>
+            </section>
+            <section id="spinner" class="text-center py5 hidden">
+                <span class="loading loading-infinity loading-xl text-purple-700"></span>
             </section>
         </div>
     </main>
