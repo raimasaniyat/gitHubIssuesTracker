@@ -31,7 +31,7 @@
         </div>
     </header>
     <main>
-        <div class="container w-[1140px] mx-auto py-[60px]">
+        <div class="container max-w-[1140px] mx-auto py-[60px]">
             <section class="toggle-parent bg-white shadow-sm">
                 <div class="ps-6 py-6">
                 <button onclick="toggleStyle('allBtn')" class="bg-primary text-white px-8 py-2 rounded-md border border-[#64748B]" id="allBtn">All</button>
@@ -39,19 +39,60 @@
                 <button onclick="toggleStyle('rejectedBtn')" class="bg-white px-4 py-2 rounded-md text-[#64748B] border border-[#64748B]" id="rejectedBtn">Rejected</button>
             </div>
             </section>
-            <section class="issue-parent bg-white shadow-sm">
-                <div class="ps-6 py-6">
-                    <div class="issues-div">
-                        <div class="issue-icon">
+            <section class="issue-parent mt-4 bg-white shadow-sm border-b-2 border-[#f2f2f2] border-solid">
+                <div class="p-6 flex justify-between items-center">
+                    <div class="issues-div flex items-center gap-2">
+                        <div class="issue-icon bg-base-200 p-2 rounded-full">
                             <h4 class="text-3xl text-primary"><i class="fa-solid fa-dharmachakra"></i></h4>
                         </div>
-                        <div class="issue-texts">
-
+                        <div class="issue-texts flex flex-col gap-0">
+                            <h3 class="text-[#1F2937] font-bold"><span id="issues">50</span> Issues</h3>
+                            <p class="text-[#64748B]">Track and manage your project issues</p>
                         </div>
                     </div>
                     <div class="stat-indicator">
-
+                        <ul class="flex justify-between gap-4 list-disc">
+                            <li class="text-[#00A96E] mr-4 font-bold">Open</li>
+                            <li class="text-[#A855F7] font-bold">Closed</li>
+                        </ul>
                     </div>
+                </div>
+            </section>
+            <section class="main bg-[#FBFBFB] shadow-sm">
+                <div class="main-wrap p-6">
+                    <!-- card 1 -->
+                     <div class="card-item">
+                        <div class="card-wrap">
+                            <div class="card-toper">
+                                <div class="card-stat">
+                                    <div class="card-stat-icon">
+                                        <p><i class="fa-regular fa-circle"></i></p>
+                                    </div>
+                                    <div class="card-stat-condition">
+                                        <p>High</p>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Fix navigation menu on mobile devices</h4>
+                                    <p>The navigation menu doesn't collapse properly on mobile devices...</p>
+                                    <div class="labels flex gap-2">
+                                        <div class="bugs">
+                                            <p>Bug</p>
+                                        </div>
+                                        <div class="assistance">
+                                            <p>help wanted</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                     
+
                 </div>
             </section>
         </div>
