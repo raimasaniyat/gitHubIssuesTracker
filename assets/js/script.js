@@ -8,7 +8,7 @@ document.getElementById("login-btn").addEventListener("click", function(){
 
     if(userName == "admin" && userPass == "admin123"){
         alert("login successful");
-        window.location.href("./home.html");
+        window.location.assign("home.html");
     }
     else{
         alert("error! give the correct input.");
