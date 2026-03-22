@@ -7,7 +7,7 @@ document.getElementById("login-btn").addEventListener("click", function(){
     const userPass = passInput.value;
 
     if(userName == "admin" && userPass == "admin123"){
-        alert("login successful");
+        
         window.location.assign("../../home.html");
     }
     else{
